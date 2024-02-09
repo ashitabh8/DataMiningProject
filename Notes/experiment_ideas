@@ -1,0 +1,15 @@
+
+1. Last couple of layers can Probabilisic Models that are tuned at runtime, if needed.
+2. Stochastic Selection
+3. Model driven selection
+4. Abstract domain based selection
+5. Data Preprocessing Abstract domain driven
+
+
+
+Energy aware quantization at runtime
+
+
+
+[TODO]
+Replace data_processing -> import_data for less confusion
