@@ -127,7 +127,7 @@ def get_train_test_dataloader(vehicle_objs, one_hot_encodings, remove_silence = 
     test_dataset = TensorDataset(X_test, y_test)
 
 # Create DataLoaders for the datasets
-    train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True, drop_last=True)
+    train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=False, drop_last=True)
     val_loader = DataLoader(dataset=val_dataset, batch_size=batch_size, shuffle=False)
     test_loader = DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=False)
 
@@ -151,8 +151,6 @@ if __name__ == "__main__":
     vehicle_objs = basic_vehicle_object_setup.get_vehicle_objects(names, processing_duration=0.5)
 
 
-    # breakpoint()
-
     for vehicle in vehicle_objs:
         processing_steps(vehicle)
 
@@ -169,6 +167,8 @@ if __name__ == "__main__":
 
 
     train_loader,val_loader, test_loader = get_train_test_dataloader(vehicle_objs, one_hot_encodings)
+
+    
 
     model = CNN_nodeep_v2(num_classes = len(one_hot_encodings))
 
