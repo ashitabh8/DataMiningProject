@@ -8,3 +8,7 @@
 5. Audio data is 16000 samples in each .pt file (The parkland readme might've a typo), freq 8000Hz so 2 seconds
 6. The main file to use as a reference for analysis is Analytics/analyse_fft_pts
 7. To run a file in analytics use: ```python -m Analytics.analyse_fft_pts``` ( the project is structured as a python package
+
+### Pattern mining
+1. Run: ```pip install pycspade```
+2. Run: ```python3 Analytics/example_file.py``` from root directory
